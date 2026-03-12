@@ -1,5 +1,5 @@
 === WP 1% pour les enfants ===
-Contributors: yourname
+Contributors: Thierry Delbart
 Tags: donation, children, charity
 Requires at least: 5.0
 Tested up to: 6.4
@@ -7,7 +7,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A simple WordPress plugin that pledges 1% of ... (describe functionality).
+A WordPress plugin to enhance 1% pour les enfants website
 
 == Installation ==
 1. Upload the `wp_1pple` folder to the `/wp-content/plugins/` directory.
@@ -15,7 +15,7 @@ A simple WordPress plugin that pledges 1% of ... (describe functionality).
 3. Configure if needed.
 
 == Description ==
-Describe what the plugin does.
+- Adds a new post type for projects
 
 == Frequently Asked Questions ==
 
