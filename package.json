@@ -1,6 +1,6 @@
 {
   "name": "wp_1pple",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Build helper for WP 1% pour les enfants plugin",
   "scripts": {
     "build": "mkdir -p dist && zip -r dist/wp_1pple.zip wp_1pple"

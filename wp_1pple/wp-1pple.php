@@ -3,7 +3,7 @@
  * Plugin Name: WP 1% pour les enfants
  * Plugin URI:  
  * Description: A simple plugin to enhance WordPress functionality for "1% pour les enfants" website
- * Version:     1.0.8
+ * Version:     1.0.9
  * Author:      Thierry Delbart
  * Author URI:  
  * License:     GPL2
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define plugin constants.
-define( 'WP_1PPLE_VERSION', '1.0.8' );
+define( 'WP_1PPLE_VERSION', '1.0.9' );
 define( 'WP_1PPLE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WP_1PPLE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
@@ -69,4 +69,14 @@ function wp_1pple_register_project_post_type() {
 // Shortcode qui retourne l'ID du post courant
 add_shortcode('post_id', function() {
     return get_the_ID();
+});
+
+// Shortcode qui retourne une URL complète avec l'ID
+add_shortcode('project_url', function($atts) {
+    $atts = shortcode_atts([
+        'base' => '/register?pid='
+    ], $atts);
+    
+    $id = get_the_ID();
+    return esc_url($atts['base'] . $id);
 });
