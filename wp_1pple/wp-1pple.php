@@ -65,3 +65,8 @@ function wp_1pple_register_project_post_type() {
 
     register_post_type( 'project', $args );
 }
+
+// Shortcode qui retourne l'ID du post courant
+add_shortcode('post_id', function() {
+    return get_the_ID();
+});
